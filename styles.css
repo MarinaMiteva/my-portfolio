@@ -38,9 +38,7 @@ footer {
     align-items: center;
     padding: 20px;
     position: sticky;
-
     background-color: #e6b2c6;
-   
 }
 
 .navbar {
@@ -77,15 +75,24 @@ aside {
 }
 
 .main-section h1 {
+    position: relative;
     font-weight: 700;
     font-size: 40px;
     color:#352961;
+    animation: fadeInUp 1s ease-in-out;
+
 }
 
 .main-section h3 {
     font-weight: 700;
     font-size: 30px;
    color: #774181;
+   animation: fadeInUp 1.5s ease-in-out;
+}
+
+.main-section p {
+    color:#352961;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 .aside img {
@@ -108,10 +115,25 @@ aside {
     color:#774181; 
 
     letter-spacing: 1px;
+    animation: fadeInUp 0.5s ease-in-out;
 }
 
-.main-section p {
-    color:#352961;
-
+.social-links i {
+    margin-right: 5px;
 }
 
+.social-links,
+.address  {
+    list-style-type: none;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
