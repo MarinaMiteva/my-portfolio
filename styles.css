@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f6e5e5;
+   background-color: #f6e5e5;
 }
 
 #container {
@@ -94,8 +94,8 @@ aside {
 .main-section h3 {
     font-weight: 700;
     font-size: 30px;
-   color: #774181;
-   animation: fadeInUp 1.5s ease-in-out;
+    color: #774181;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .main-section p {
@@ -157,8 +157,7 @@ aside {
     transition: color 0.5s ease-in-out;
 }
 
-.social-links a:hover,
-.address li:hover {
+.social-links a:hover {
     color: #f6e5e5;
 }
 
@@ -171,6 +170,74 @@ aside {
     font-size: 18px;
     margin-right: 8px;
 }
+
+/* Contact Form */
+
+.form {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#f6e5e5, #df8daa);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#774181;
+}
+form {
+    width: 90%;
+    max-width: 600px;
+}
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #774181;
+    color:#774181;
+    background: transparent;
+    font-size: 15px;
+}
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color:#774181;
+    cursor: text;
+    transition: 0.2s;
+}
+
+button,
+.submit-button {
+    padding: 10px;
+    color: #774181;
+    outline: none;
+    background: transparent;
+    border: 1px solid #774181;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+button:hover,
+.submit-button:hover {
+    background-color: #774181;
+    color: #f6e5e5;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label
+ {
+    top: -35px;
+    font-size: 14px;
+
+}
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -179,5 +246,23 @@ aside {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #container {
+        grid-template-columns: 1fr minmax(25%, 700px);
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .main,
+    .aside {
+        padding: 0 10%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .aside img {
+        width: 50%;
     }
 }
