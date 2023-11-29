@@ -31,14 +31,22 @@ footer {
     grid-column: 2 / 3;
 }
 
-.header,
-footer {
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     position: sticky;
-    background-color: #e6b2c6;
+    background: linear-gradient(to right, #df8daa, #eeccd9);  
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    background: linear-gradient(to right, #eeccd9, #df8daa); 
 }
 
 .navbar {
@@ -116,7 +124,8 @@ aside {
 
     letter-spacing: 1px;
     animation: fadeInUp 0.5s ease-in-out;
-}
+} 
+
 
 .social-links i {
     margin-right: 5px;
@@ -126,7 +135,42 @@ aside {
 .address  {
     list-style-type: none;
 }
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.social-links li,
+.address li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.social-links a,
+.address li {
+    text-decoration: none;
+    color: #352961;
+    display: flex;
+    align-items: center;
+    transition: color 0.5s ease-in-out;
+}
+
+.social-links a:hover,
+.address li:hover {
+    color: #f6e5e5;
+}
+
+.social-links i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.address i {
+    font-size: 18px;
+    margin-right: 8px;
+}
 @keyframes fadeInUp {
     0% {
         opacity: 0;
